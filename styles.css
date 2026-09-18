@@ -1,0 +1,336 @@
+:root {
+  color-scheme: light;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: #dfe8e3;
+  color: #173f3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.9), transparent 30rem),
+    linear-gradient(145deg, #f4f0e7 0%, #dfe8e3 52%, #bfcfca 100%);
+}
+
+button {
+  font: inherit;
+}
+
+.preview-layout {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 7vw, 7rem);
+  padding: 4dvh 4vw;
+}
+
+.phone {
+  position: relative;
+  width: min(591px, calc(94dvh * 591 / 1280));
+  aspect-ratio: 591 / 1280;
+  flex: none;
+  overflow: hidden;
+  border: 1px solid rgba(44, 75, 70, 0.16);
+  border-radius: 4.5% / 2.1%;
+  background: #f8f5ed;
+  box-shadow:
+    0 2rem 6rem rgba(20, 56, 52, 0.22),
+    0 0.4rem 1.2rem rgba(20, 56, 52, 0.12);
+  isolation: isolate;
+}
+
+.screen-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.screen-image.is-changing {
+  animation: page-fade 220ms ease-out;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0.35;
+    transform: scale(1.008);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hotspot-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hotspot-layer[hidden] {
+  display: none;
+}
+
+.hotspot {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.001);
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(30, 102, 96, 0.16);
+}
+
+.hotspot:focus-visible {
+  outline: 3px solid #e0a956;
+  outline-offset: -3px;
+  background: rgba(255, 250, 226, 0.1);
+}
+
+.login-consent {
+  left: 25.2%;
+  top: 83.4%;
+  width: 8%;
+  height: 4.8%;
+  border-radius: 50%;
+}
+
+.login-consent[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 36%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #176b62;
+}
+
+.login-consent[aria-pressed="true"]::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 48%;
+  width: 13%;
+  height: 25%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+}
+
+.login-wechat {
+  left: 18%;
+  top: 65.1%;
+  width: 64%;
+  height: 5.6%;
+  border-radius: 999px;
+}
+
+.home-guide-tab {
+  left: 25%;
+  bottom: 0;
+  width: 24%;
+  height: 10.5%;
+}
+
+.home-mine-tab {
+  left: 65%;
+  bottom: 0;
+  width: 24%;
+  height: 10.5%;
+}
+
+.mine-home-tab,
+.mine-guide-tab,
+.mine-current-tab {
+  bottom: 0;
+  width: 24%;
+  height: 10.5%;
+}
+
+.mine-home-tab { left: 13%; }
+.mine-guide-tab { left: 39%; }
+.mine-current-tab { left: 65%; }
+
+.guide-back {
+  left: 1.6%;
+  top: 0.9%;
+  width: 13%;
+  height: 6.6%;
+}
+
+.guide-leisure {
+  left: 27.5%;
+  top: 24.25%;
+  width: 22.5%;
+  height: 3.4%;
+}
+
+.guide-family {
+  left: 52%;
+  top: 24.25%;
+  width: 21%;
+  height: 3.4%;
+}
+
+.guide-start {
+  right: 4.6%;
+  bottom: 1.2%;
+  width: 69.5%;
+  height: 4.5%;
+}
+
+.leisure-culture {
+  left: 3.8%;
+  top: 23.7%;
+  width: 23%;
+  height: 4.2%;
+}
+
+.leisure-family {
+  left: 51%;
+  top: 23.7%;
+  width: 22%;
+  height: 4.2%;
+}
+
+.toast {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 8.5%;
+  width: max-content;
+  max-width: 82%;
+  transform: translateX(-50%);
+  padding: 0.7rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(19, 69, 65, 0.92);
+  box-shadow: 0 0.8rem 2rem rgba(17, 53, 50, 0.24);
+  color: #fff;
+  font-size: clamp(0.74rem, 2.6vw, 0.88rem);
+  line-height: 1.4;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.desktop-note {
+  width: min(360px, 32vw);
+  padding: 2.4rem;
+  border: 1px solid rgba(46, 83, 77, 0.13);
+  border-radius: 2rem;
+  background: rgba(255, 252, 245, 0.84);
+  box-shadow: 0 1.5rem 4rem rgba(36, 68, 63, 0.13);
+  backdrop-filter: blur(18px);
+}
+
+.desktop-note .eyebrow {
+  margin: 0 0 0.55rem;
+  color: #b88439;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.desktop-note h1 {
+  margin: 0;
+  font-family: "STSong", "Songti SC", serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.desktop-note p {
+  margin: 1rem 0;
+  color: #47635f;
+  line-height: 1.75;
+}
+
+.desktop-note img {
+  display: block;
+  width: min(100%, 248px);
+  margin: 1.25rem auto;
+  padding: 0.7rem;
+  border-radius: 1.25rem;
+  background: #fff;
+}
+
+.desktop-note code {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #1e6963;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.desktop-note .hint {
+  margin-bottom: 0;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-left: env(safe-area-inset-left, 0px);
+  }
+
+  body {
+    overflow: hidden;
+    background: #e9eee9;
+  }
+
+  .preview-layout {
+    width: 100vw;
+    height: var(--app-viewport-height, 100svh);
+    min-height: 0;
+    display: grid;
+    place-items: center;
+    padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+    overflow: hidden;
+  }
+
+  .phone {
+    width: var(--app-frame-width, 100vw);
+    height: var(--app-frame-height, auto);
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 591 / 1280;
+    border: 0;
+    border-radius: min(4.5vw, 24px) / min(2.1vw, 12px);
+    box-shadow: none;
+  }
+
+  .desktop-note {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen-image.is-changing {
+    animation: none;
+  }
+}
