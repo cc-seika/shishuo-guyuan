@@ -1,0 +1,35 @@
+.back-zone {
+  left: 1.6%;
+  top: 0.9%;
+  width: 13%;
+  height: 6.6%;
+  border-radius: 24rpx;
+}
+
+.leisure-zone {
+  left: 27.5%;
+  top: 24.25%;
+  width: 22.5%;
+  height: 3.4%;
+  border-radius: 18rpx;
+}
+
+.family-zone {
+  left: 52%;
+  top: 24.25%;
+  width: 21%;
+  height: 3.4%;
+  border-radius: 18rpx;
+}
+
+.start-zone {
+  right: 4.6%;
+  bottom: 1.2%;
+  width: 69.5%;
+  height: 4.5%;
+  border-radius: 999rpx;
+}
+
+.tap-active {
+  background: rgba(30, 102, 96, 0.12);
+}

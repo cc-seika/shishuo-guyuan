@@ -1,0 +1,26 @@
+<view class="prototype-page" aria-label="师说古渊首页">
+  <view class="screen-frame" style="{{frameStyle}}">
+    <image
+      class="prototype-screen"
+      src="/assets/home.jpg"
+      mode="scaleToFill"
+      aria-label="师说古渊首页界面"
+    />
+
+    <view
+      class="tap-zone guide-tab-zone"
+      bindtap="goGuide"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="进入导览页面"
+    ></view>
+
+    <view
+      class="tap-zone mine-tab-zone"
+      bindtap="goMine"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="进入我的页面"
+    ></view>
+  </view>
+</view>

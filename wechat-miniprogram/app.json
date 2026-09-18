@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/guide/guide",
+    "pages/leisure/leisure",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#f8f5ed",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

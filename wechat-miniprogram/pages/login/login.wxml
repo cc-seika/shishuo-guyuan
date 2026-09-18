@@ -1,0 +1,24 @@
+<view class="prototype-page" aria-label="师说古渊登录页">
+  <view class="screen-frame" style="{{frameStyle}}">
+    <image class="prototype-screen" src="/assets/login.jpg" mode="scaleToFill" aria-label="师说古渊登录界面" />
+    <view
+      class="tap-zone consent-zone"
+      bindtap="toggleConsent"
+      hover-class="tap-active"
+      aria-role="checkbox"
+      aria-checked="{{consentAccepted}}"
+      aria-label="阅读并同意用户协议和隐私政策"
+    >
+      <view wx:if="{{consentAccepted}}" class="consent-mark">
+        <view class="consent-check"></view>
+      </view>
+    </view>
+    <view
+      class="tap-zone wechat-zone"
+      bindtap="wechatLogin"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="微信一键登录"
+    ></view>
+  </view>
+</view>

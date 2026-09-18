@@ -1,0 +1,42 @@
+<view class="prototype-page" aria-label="师说古渊文化研学线导览页">
+  <view class="screen-frame" style="{{frameStyle}}">
+    <image
+      class="prototype-screen"
+      src="/assets/guide-culture.jpg"
+      mode="scaleToFill"
+      aria-label="文化研学线导览界面"
+    />
+
+    <view
+      class="tap-zone back-zone"
+      bindtap="goBack"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="返回首页"
+    ></view>
+
+    <view
+      class="tap-zone leisure-zone"
+      bindtap="goLeisure"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="切换到休闲体验线"
+    ></view>
+
+    <view
+      class="tap-zone family-zone"
+      bindtap="showFamilyNotice"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="切换到亲子探索线"
+    ></view>
+
+    <view
+      class="tap-zone start-zone"
+      bindtap="showNavigationNotice"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="开始导航"
+    ></view>
+  </view>
+</view>
