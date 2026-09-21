@@ -16,7 +16,7 @@
 任何人都可以直接访问以下公网地址，不需要与开发电脑连接同一个 Wi-Fi，开发电脑关机后也可继续访问：
 
 ```text
-https://cc-seika.github.io/shishuo-guyuan/?v=flow-13#login
+https://cc-seika.github.io/shishuo-guyuan/?v=flow-14#login
 ```
 
 `web/assets/preview-qr.png` 已更新为该公网地址的二维码。
@@ -32,7 +32,7 @@ powershell -ExecutionPolicy Bypass -File .\start-preview.ps1
 本机调试地址为：
 
 ```text
-http://127.0.0.1:4173/web/?v=flow-13#login
+http://127.0.0.1:4173/web/?v=flow-14#login
 ```
 
 本机调试链接仅用于开发；对外分享请使用上方 GitHub Pages 公网地址和二维码。
