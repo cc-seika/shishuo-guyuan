@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f6f2e9" />
     <meta name="description" content="师说古渊文旅导览小程序首版交互原型" />
     <title>师说古渊</title>
-    <link rel="stylesheet" href="./styles.css?v=flow-8" />
+    <link rel="stylesheet" href="./styles.css?v=flow-9" />
   </head>
   <body>
     <main class="preview-layout">
@@ -14,7 +14,7 @@
         <img
           id="screen-image"
           class="screen-image"
-          src="./assets/login.jpg?v=flow-8"
+          src="./assets/login.jpg?v=flow-9"
           alt="师说古渊登录页"
           draggable="false"
         />
@@ -37,23 +37,23 @@
 
         <div class="hotspot-layer" data-screen-layer="home" aria-label="首页交互区域" hidden>
           <div class="home-landscape-motion" aria-hidden="true"></div>
-          <img class="home-ip home-ip-left" src="./assets/home-motion/ip-left.png?v=flow-8" alt="" aria-hidden="true" />
-          <img class="home-ip home-ip-right" src="./assets/home-motion/ip-right.png?v=flow-8" alt="" aria-hidden="true" />
+          <img class="home-ip home-ip-left" src="./assets/home-motion/ip-left.png?v=flow-9" alt="" aria-hidden="true" />
+          <img class="home-ip home-ip-right" src="./assets/home-motion/ip-right.png?v=flow-9" alt="" aria-hidden="true" />
           <span class="home-wave home-wave-left" aria-hidden="true"></span>
           <span class="home-wave home-wave-right" aria-hidden="true"></span>
-          <img class="home-bamboo" src="./assets/home-motion/bamboo.png?v=flow-8" alt="" aria-hidden="true" />
+          <img class="home-bamboo" src="./assets/home-motion/bamboo.png?v=flow-9" alt="" aria-hidden="true" />
           <div class="home-recommendations" aria-label="今日推荐风景">
-            <span><img src="./assets/home-motion/recommend-1.jpg?v=flow-8" alt="古桥流水" /></span>
-            <span><img src="./assets/home-motion/recommend-2.jpg?v=flow-8" alt="水乡漫游" /></span>
-            <span><img src="./assets/home-motion/recommend-3.jpg?v=flow-8" alt="清廉茶社" /></span>
-            <span><img src="./assets/home-motion/recommend-4.jpg?v=flow-8" alt="博士书房" /></span>
+            <span><img src="./assets/home-motion/recommend-1.jpg?v=flow-9" alt="古桥流水" /></span>
+            <span><img src="./assets/home-motion/recommend-2.jpg?v=flow-9" alt="水乡漫游" /></span>
+            <span><img src="./assets/home-motion/recommend-3.jpg?v=flow-9" alt="清廉茶社" /></span>
+            <span><img src="./assets/home-motion/recommend-4.jpg?v=flow-9" alt="博士书房" /></span>
           </div>
           <div class="home-events-slider" aria-label="近期活动，可左右滑动">
-            <img src="./assets/home-motion/event-1.jpg?v=flow-8" alt="古渊水上集市" />
-            <img src="./assets/home-motion/event-2.jpg?v=flow-8" alt="水稻制作体验" />
-            <img src="./assets/home-motion/event-3.jpg?v=flow-8" alt="清风茶会" />
-            <img src="./assets/home-motion/event-1.jpg?v=flow-8" alt="古渊水上集市加场" />
-            <img src="./assets/home-motion/event-2.jpg?v=flow-8" alt="水稻制作体验加场" />
+            <img src="./assets/home-motion/event-1.jpg?v=flow-9" alt="古渊水上集市" />
+            <img src="./assets/home-motion/event-2.jpg?v=flow-9" alt="水稻制作体验" />
+            <img src="./assets/home-motion/event-3.jpg?v=flow-9" alt="清风茶会" />
+            <img src="./assets/home-motion/event-1.jpg?v=flow-9" alt="古渊水上集市加场" />
+            <img src="./assets/home-motion/event-2.jpg?v=flow-9" alt="水稻制作体验加场" />
           </div>
           <button class="hotspot home-ai-chat" type="button" data-action="ai-guide-1" aria-label="与AI助手对话"></button>
           <button
@@ -67,6 +67,7 @@
         </div>
 
         <div class="hotspot-layer" data-screen-layer="mine" aria-label="我的页面交互区域" hidden>
+          <div class="mine-landscape-motion" aria-hidden="true"></div>
           <button class="hotspot mine-favorites" type="button" data-action="show-favorites" aria-label="查看收藏路线"></button>
           <button class="hotspot mine-ai-history" type="button" data-action="show-ai-history" aria-label="查看AI导览记录"></button>
           <button class="hotspot mine-home-tab" type="button" data-action="home" aria-label="返回首页"></button>
@@ -75,6 +76,15 @@
         </div>
 
         <div class="hotspot-layer" data-screen-layer="culture" aria-label="文化研学线交互区域" hidden>
+          <div class="guide-scenery-motion" aria-hidden="true"></div>
+          <img class="guide-ip guide-ip-top" src="./assets/guide-motion/culture-ip-top.png?v=flow-9" alt="" aria-hidden="true" />
+          <img class="guide-ip guide-ip-bottom" src="./assets/guide-motion/culture-ip-bottom.png?v=flow-9" alt="" aria-hidden="true" />
+          <div class="map-stations map-stations-culture" aria-label="文化研学线地图站点">
+            <button style="--x:8%;--y:78%">1 入口牌坊</button><button style="--x:21%;--y:55%">2 清廉茶社</button><button style="--x:40%;--y:34%">3 水稻工坊</button><button style="--x:57%;--y:12%">4 博士书房</button><button style="--x:67%;--y:29%">5 文创小集</button><button style="--x:58%;--y:65%">7 书卷巷</button><button style="--x:82%;--y:53%">8 叶氏宗祠</button>
+          </div>
+          <div class="guide-stops-slider" aria-label="文化研学线路线站点，可左右滑动">
+            <img src="./assets/guide-motion/culture-stop-1.jpg?v=flow-9" alt="入口牌坊" /><img src="./assets/guide-motion/culture-stop-2.jpg?v=flow-9" alt="清廉茶社" /><img src="./assets/guide-motion/culture-stop-3.jpg?v=flow-9" alt="水稻工坊" /><img src="./assets/guide-motion/culture-stop-4.jpg?v=flow-9" alt="博士书房" /><img src="./assets/guide-motion/culture-stop-2.jpg?v=flow-9" alt="文创小集" /><img src="./assets/guide-motion/culture-stop-3.jpg?v=flow-9" alt="书卷巷" />
+          </div>
           <button
             class="hotspot guide-back"
             type="button"
@@ -104,6 +114,15 @@
         </div>
 
         <div class="hotspot-layer" data-screen-layer="leisure" aria-label="休闲体验线交互区域" hidden>
+          <div class="guide-scenery-motion" aria-hidden="true"></div>
+          <img class="guide-ip guide-ip-top" src="./assets/guide-motion/leisure-ip-top.png?v=flow-9" alt="" aria-hidden="true" />
+          <img class="guide-ip guide-ip-bottom" src="./assets/guide-motion/leisure-ip-bottom.png?v=flow-9" alt="" aria-hidden="true" />
+          <div class="map-stations map-stations-leisure" aria-label="休闲体验线地图站点">
+            <button style="--x:8%;--y:78%">1 入口牌坊</button><button style="--x:21%;--y:55%">2 清廉茶社</button><button style="--x:43%;--y:31%">3 文创集市</button><button style="--x:68%;--y:10%">4 荷塘渔乐区</button>
+          </div>
+          <div class="guide-stops-slider" aria-label="休闲体验线路线站点，可左右滑动">
+            <img src="./assets/guide-motion/leisure-stop-1.jpg?v=flow-9" alt="入口牌坊" /><img src="./assets/guide-motion/leisure-stop-2.jpg?v=flow-9" alt="清廉茶社" /><img src="./assets/guide-motion/leisure-stop-3.jpg?v=flow-9" alt="文创集市" /><img src="./assets/guide-motion/leisure-stop-4.jpg?v=flow-9" alt="荷塘渔乐区" /><img src="./assets/guide-motion/leisure-stop-2.jpg?v=flow-9" alt="茶社体验" />
+          </div>
           <button class="hotspot guide-back" type="button" data-action="home" aria-label="返回首页"></button>
           <button class="hotspot leisure-culture" type="button" data-action="culture" aria-label="切换到文化研学线"></button>
           <button class="hotspot leisure-family" type="button" data-action="family" aria-label="切换到亲子探索线"></button>
@@ -118,6 +137,15 @@
         </div>
 
         <div class="hotspot-layer" data-screen-layer="family" aria-label="亲子探索线交互区域" hidden>
+          <div class="guide-scenery-motion" aria-hidden="true"></div>
+          <img class="guide-ip guide-ip-top" src="./assets/guide-motion/family-ip-top.png?v=flow-9" alt="" aria-hidden="true" />
+          <img class="guide-ip guide-ip-bottom" src="./assets/guide-motion/family-ip-bottom.png?v=flow-9" alt="" aria-hidden="true" />
+          <div class="map-stations map-stations-family" aria-label="亲子探索线地图站点">
+            <button style="--x:8%;--y:78%">1 入口牌坊</button><button style="--x:19%;--y:54%">2 古樟问道广场</button><button style="--x:40%;--y:35%">3 水稻工坊</button><button style="--x:54%;--y:12%">4 非遗手作坊</button><button style="--x:67%;--y:29%">5 亲子自然课堂</button><button style="--x:62%;--y:55%">6 博士书房</button><button style="--x:61%;--y:69%">7 文创小集</button><button style="--x:83%;--y:54%">8 叶氏宗祠</button>
+          </div>
+          <div class="guide-stops-slider" aria-label="亲子探索线路线站点，可左右滑动">
+            <img src="./assets/guide-motion/family-stop-1.jpg?v=flow-9" alt="入口牌坊" /><img src="./assets/guide-motion/family-stop-2.jpg?v=flow-9" alt="古樟问道广场" /><img src="./assets/guide-motion/family-stop-3.jpg?v=flow-9" alt="水稻工坊" /><img src="./assets/guide-motion/family-stop-4.jpg?v=flow-9" alt="非遗手作坊" /><img src="./assets/guide-motion/family-stop-2.jpg?v=flow-9" alt="亲子自然课堂" /><img src="./assets/guide-motion/family-stop-3.jpg?v=flow-9" alt="博士书房" />
+          </div>
           <button class="hotspot guide-back" type="button" data-action="home" aria-label="返回首页"></button>
           <button class="hotspot family-culture" type="button" data-action="culture" aria-label="切换到文化研学线"></button>
           <button class="hotspot family-leisure" type="button" data-action="leisure" aria-label="切换到休闲体验线"></button>
@@ -170,12 +198,12 @@
         <p class="eyebrow">V0.1 交互原型</p>
         <h1>师说古渊</h1>
         <p>使用微信或手机浏览器扫码，即可通过公网体验完整首版流程。</p>
-        <img src="./assets/preview-qr.png?v=flow-8" alt="师说古渊公网预览二维码" />
+        <img src="./assets/preview-qr.png?v=flow-9" alt="师说古渊公网预览二维码" />
         <code>cc-seika.github.io/shishuo-guyuan/</code>
         <p class="hint">勾选协议并登录后，可从首页底部进入“导览”或“我的”，继续体验首版流程。</p>
       </aside>
     </main>
 
-    <script src="./app.js?v=flow-8"></script>
+    <script src="./app.js?v=flow-9"></script>
   </body>
 </html>
