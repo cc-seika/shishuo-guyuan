@@ -2,7 +2,7 @@
 .culture-zone { left: 3.2%; top: 22.4%; width: 23.5%; height: 4.6%; border-radius: 18rpx; }
 .leisure-zone { left: 27.3%; top: 22.4%; width: 22.5%; height: 4.6%; border-radius: 18rpx; }
 .favorite-zone { left: 1.8%; bottom: 1.1%; width: 24.5%; height: 5.8%; border-radius: 999rpx; }
-.favorite-star { position: absolute; left: 7.5%; top: 27%; transform: translateY(-50%); color: #12675f; font-size: 28rpx; line-height: 1; text-shadow: 0 1rpx 2rpx rgba(12, 76, 69, 0.18); }
+.favorite-star { position: absolute; left: 9.5%; top: 27%; transform: translateY(-50%); color: #12675f; font-size: 28rpx; line-height: 1; text-shadow: 0 1rpx 2rpx rgba(12, 76, 69, 0.18); }
 .start-zone { right: 4.6%; bottom: 1.2%; width: 69.5%; height: 4.5%; border-radius: 999rpx; }
 .tap-active { background: rgba(30, 102, 96, 0.12); }
 .guide-scenery-motion { position:absolute; z-index:1; left:-20%; top:8%; width:140%; height:12%; opacity:.3; background:repeating-linear-gradient(100deg,transparent 0 24rpx,rgba(255,255,255,.72) 26rpx 29rpx,transparent 31rpx 52rpx); animation:guide-flow 11s linear infinite; pointer-events:none; }
