@@ -1,6 +1,15 @@
 <view class="prototype-page" aria-label="师说古渊休闲体验线导览页">
   <view class="screen-frame" style="{{frameStyle}}">
     <image class="prototype-screen" src="/assets/guide-leisure.jpg" mode="scaleToFill" aria-label="休闲体验线导览界面" />
+    <view class="guide-scenery-motion"></view>
+    <image class="guide-ip guide-ip-top" src="/assets/guide-motion/leisure-ip-top.png" mode="widthFix" />
+    <image class="guide-ip guide-ip-bottom" src="/assets/guide-motion/leisure-ip-bottom.png" mode="widthFix" />
+    <view class="map-stations">
+      <text class="map-station s1" hover-class="station-active">1 入口牌坊</text><text class="map-station s2" hover-class="station-active">2 清廉茶社</text><text class="map-station s3" hover-class="station-active">3 文创集市</text><text class="map-station s4" hover-class="station-active">4 荷塘渔乐区</text>
+    </view>
+    <scroll-view class="guide-stops-slider" scroll-x="true" enhanced="true" show-scrollbar="false">
+      <view class="stops-row"><image src="/assets/guide-motion/leisure-stop-1.jpg" mode="aspectFill" /><image src="/assets/guide-motion/leisure-stop-2.jpg" mode="aspectFill" /><image src="/assets/guide-motion/leisure-stop-3.jpg" mode="aspectFill" /><image src="/assets/guide-motion/leisure-stop-4.jpg" mode="aspectFill" /><image src="/assets/guide-motion/leisure-stop-2.jpg" mode="aspectFill" /></view>
+    </scroll-view>
     <view class="tap-zone back-zone" bindtap="goHome" hover-class="tap-active" aria-role="button" aria-label="返回首页"></view>
     <view class="tap-zone culture-zone" bindtap="goCulture" hover-class="tap-active" aria-role="button" aria-label="切换到文化研学线"></view>
     <view class="tap-zone family-zone" bindtap="goFamily" hover-class="tap-active" aria-role="button" aria-label="切换到亲子探索线"></view>

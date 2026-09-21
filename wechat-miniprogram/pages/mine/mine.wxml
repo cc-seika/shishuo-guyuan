@@ -7,6 +7,8 @@
       aria-label="师说古渊我的页面界面"
     />
 
+    <view class="mine-landscape-motion" aria-hidden="true"></view>
+
     <view class="tap-zone favorites-zone" bindtap="openFavorites" hover-class="tap-active" aria-role="button" aria-label="查看收藏路线"></view>
     <view class="tap-zone ai-history-zone" bindtap="openAIHistory" hover-class="tap-active" aria-role="button" aria-label="查看AI导览记录"></view>
     <view class="tap-zone mine-home-zone" bindtap="goHome" hover-class="tap-active" aria-role="button" aria-label="返回首页"></view>

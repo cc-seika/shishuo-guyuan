@@ -14,6 +14,24 @@
   border-radius: 24rpx;
 }
 
+.mine-landscape-motion {
+  position: absolute;
+  z-index: 1;
+  left: -20%;
+  top: 5%;
+  width: 140%;
+  height: 14%;
+  opacity: .28;
+  background: repeating-linear-gradient(100deg, transparent 0 24rpx, rgba(255,255,255,.72) 26rpx 29rpx, transparent 31rpx 52rpx);
+  animation: mine-flow 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes mine-flow {
+  from { transform: translateX(-8%); }
+  to { transform: translateX(18%); }
+}
+
 .ai-history-zone {
   left: 68.5%;
   top: 40.2%;

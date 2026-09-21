@@ -12,7 +12,11 @@
   width: 25%;
   height: 4.8%;
   border-radius: 999rpx;
+  background: url("/assets/home-motion/ai-chat-button.jpg") center / 100% 100% no-repeat;
+  transition: transform 220ms ease;
 }
+
+.ai-chat-zone.tap-active { transform: scale(1.045); }
 
 .mine-tab-zone {
   left: 55%;

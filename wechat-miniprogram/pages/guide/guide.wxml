@@ -7,6 +7,16 @@
       aria-label="文化研学线导览界面"
     />
 
+    <view class="guide-scenery-motion"></view>
+    <image class="guide-ip guide-ip-top" src="/assets/guide-motion/culture-ip-top.png" mode="widthFix" />
+    <image class="guide-ip guide-ip-bottom" src="/assets/guide-motion/culture-ip-bottom.png" mode="widthFix" />
+    <view class="map-stations">
+      <text class="map-station s1" hover-class="station-active">1 入口牌坊</text><text class="map-station s2" hover-class="station-active">2 清廉茶社</text><text class="map-station s3" hover-class="station-active">3 水稻工坊</text><text class="map-station s4" hover-class="station-active">4 博士书房</text><text class="map-station s5" hover-class="station-active">5 文创小集</text><text class="map-station s7" hover-class="station-active">7 书卷巷</text><text class="map-station s8" hover-class="station-active">8 叶氏宗祠</text>
+    </view>
+    <scroll-view class="guide-stops-slider" scroll-x="true" enhanced="true" show-scrollbar="false">
+      <view class="stops-row"><image src="/assets/guide-motion/culture-stop-1.jpg" mode="aspectFill" /><image src="/assets/guide-motion/culture-stop-2.jpg" mode="aspectFill" /><image src="/assets/guide-motion/culture-stop-3.jpg" mode="aspectFill" /><image src="/assets/guide-motion/culture-stop-4.jpg" mode="aspectFill" /><image src="/assets/guide-motion/culture-stop-2.jpg" mode="aspectFill" /><image src="/assets/guide-motion/culture-stop-3.jpg" mode="aspectFill" /></view>
+    </scroll-view>
+
     <view
       class="tap-zone back-zone"
       bindtap="goBack"

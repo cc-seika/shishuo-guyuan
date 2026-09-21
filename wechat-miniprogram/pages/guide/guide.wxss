@@ -40,11 +40,11 @@
 
 .favorite-star {
   position: absolute;
-  left: 11%;
+  left: 11.5%;
   top: 36%;
   transform: translateY(-50%);
   color: #12675f;
-  font-size: 46rpx;
+  font-size: 36rpx;
   line-height: 1;
   text-shadow: 0 1rpx 2rpx rgba(12, 76, 69, 0.18);
 }
@@ -52,3 +52,18 @@
 .tap-active {
   background: rgba(30, 102, 96, 0.12);
 }
++
+
+.guide-scenery-motion { position:absolute; z-index:1; left:-20%; top:8%; width:140%; height:12%; opacity:.3; background:repeating-linear-gradient(100deg,transparent 0 24rpx,rgba(255,255,255,.72) 26rpx 29rpx,transparent 31rpx 52rpx); animation:guide-flow 11s linear infinite; pointer-events:none; }
+.guide-ip { position:absolute; z-index:2; pointer-events:none; animation:guide-ip-breathe 4.4s ease-in-out infinite; }
+.guide-ip-top { left:69.7%; top:10%; width:29.5%; transform-origin:50% 86%; }
+.guide-ip-bottom { left:0; top:71.9%; width:26.8%; transform-origin:44% 91%; animation-delay:.55s; }
+.map-stations { position:absolute; z-index:4; left:2.6%; top:27.2%; width:94.8%; height:31.8%; pointer-events:none; }
+.map-station { position:absolute; max-width:31%; padding:5rpx 10rpx; border:1rpx solid transparent; border-radius:999rpx; background:transparent; color:transparent; font-size:19rpx; font-weight:700; line-height:1.15; white-space:nowrap; opacity:0; transform:translate(-50%,-50%) scale(.94); transition:transform 190ms ease; pointer-events:auto; }
+.station-active { z-index:2; transform:translate(-50%,-50%) scale(1.075); background:#fffdf6; color:#125f57; opacity:1; }
+.s1{left:8%;top:78%}.s2{left:21%;top:55%}.s3{left:40%;top:34%}.s4{left:57%;top:12%}.s5{left:67%;top:29%}.s7{left:58%;top:65%}.s8{left:82%;top:53%}
+.guide-stops-slider { position:absolute; z-index:5; left:7.1%; top:59.4%; width:88.4%; height:12.2%; background:#f7f4ec; }
+.stops-row { display:flex; width:max-content; height:100%; gap:6rpx; }
+.stops-row image { width:174rpx; height:100%; flex:none; border-radius:10rpx; }
+@keyframes guide-flow { from{transform:translateX(-8%)} to{transform:translateX(18%)} }
+@keyframes guide-ip-breathe { 0%,100%{transform:rotate(-.7deg) translateY(0)}48%{transform:rotate(1.1deg) translateY(-1.3%)}60%{transform:rotate(.4deg) translateY(-.6%)} }
