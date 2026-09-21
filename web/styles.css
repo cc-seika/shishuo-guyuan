@@ -614,7 +614,7 @@ button {
   content: "★";
   position: absolute;
   left: 7.5%;
-  top: 36%;
+  top: 27%;
   transform: translateY(-50%) scale(0.72);
   color: transparent;
   font-size: clamp(.74rem, 3.35vw, 1.05rem);
