@@ -1,10 +1,12 @@
 const { getFrameStyle } = require("../../utils/fit-frame");
+const { recordAIVisit } = require("../../utils/ai-history");
 
 Page({
   data: { frameStyle: "" },
 
   onLoad() {
     this.setData({ frameStyle: getFrameStyle() });
+    recordAIVisit("ai-guide-one");
   },
 
   onResize(event) {

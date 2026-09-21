@@ -7,6 +7,30 @@
       aria-label="师说古渊首页界面"
     />
 
+    <view class="landscape-motion" aria-hidden="true"></view>
+    <image class="home-ip ip-left" src="/assets/home-motion/ip-left.png" mode="widthFix" aria-hidden="true" />
+    <image class="home-ip ip-right" src="/assets/home-motion/ip-right.png" mode="widthFix" aria-hidden="true" />
+    <view class="home-wave wave-left" aria-hidden="true"></view>
+    <view class="home-wave wave-right" aria-hidden="true"></view>
+    <image class="home-bamboo" src="/assets/home-motion/bamboo.png" mode="widthFix" aria-hidden="true" />
+
+    <view class="recommendations" aria-label="今日推荐风景">
+      <view class="recommend-frame" hover-class="recommend-active"><image src="/assets/home-motion/recommend-1.jpg" mode="aspectFill" /></view>
+      <view class="recommend-frame" hover-class="recommend-active"><image src="/assets/home-motion/recommend-2.jpg" mode="aspectFill" /></view>
+      <view class="recommend-frame" hover-class="recommend-active"><image src="/assets/home-motion/recommend-3.jpg" mode="aspectFill" /></view>
+      <view class="recommend-frame" hover-class="recommend-active"><image src="/assets/home-motion/recommend-4.jpg" mode="aspectFill" /></view>
+    </view>
+
+    <scroll-view class="events-slider" scroll-x="true" enhanced="true" show-scrollbar="false" aria-label="近期活动，可左右滑动">
+      <view class="events-row">
+        <image src="/assets/home-motion/event-1.jpg" mode="aspectFill" />
+        <image src="/assets/home-motion/event-2.jpg" mode="aspectFill" />
+        <image src="/assets/home-motion/event-3.jpg" mode="aspectFill" />
+        <image src="/assets/home-motion/event-1.jpg" mode="aspectFill" />
+        <image src="/assets/home-motion/event-2.jpg" mode="aspectFill" />
+      </view>
+    </scroll-view>
+
     <view
       class="tap-zone ai-chat-zone"
       bindtap="goAIGuide"
@@ -29,6 +53,14 @@
       hover-class="tap-active"
       aria-role="button"
       aria-label="进入我的页面"
+    ></view>
+
+    <view
+      class="tap-zone ai-orb-zone"
+      bindtap="goAIGuide"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="打开AI讲解员"
     ></view>
   </view>
 </view>

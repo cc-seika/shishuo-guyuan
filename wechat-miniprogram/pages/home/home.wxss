@@ -15,12 +15,93 @@
 }
 
 .mine-tab-zone {
-  left: 65%;
+  left: 55%;
   bottom: 0;
-  width: 24%;
+  width: 23%;
   height: 10.5%;
   border-radius: 24rpx;
 }
+
+.ai-orb-zone {
+  right: 1.5%;
+  bottom: 0.8%;
+  width: 19.5%;
+  height: 10.5%;
+  border-radius: 50%;
+}
+
+.landscape-motion {
+  position: absolute;
+  z-index: 1;
+  left: -20%;
+  top: 11%;
+  width: 140%;
+  height: 9%;
+  opacity: 0.28;
+  background: repeating-linear-gradient(100deg, transparent 0 24rpx, rgba(255,255,255,.72) 26rpx 29rpx, transparent 31rpx 52rpx);
+  animation: landscape-flow 9s linear infinite;
+}
+
+.home-ip,
+.home-bamboo {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ip-left { left: 47.7%; top: 21.55%; width: 24.4%; transform-origin: 52% 88%; animation: ip-left 4.2s ease-in-out infinite; }
+.ip-right { left: 67.3%; top: 21.55%; width: 27.1%; transform-origin: 46% 88%; animation: ip-right 4.2s ease-in-out .35s infinite; }
+.home-bamboo { right: 1.5%; top: 31.1%; width: 11.4%; transform-origin: 83% 82%; animation: bamboo-sway 3.8s ease-in-out infinite; }
+
+.home-wave {
+  position: absolute;
+  z-index: 2;
+  width: 3.2%;
+  height: 1.5%;
+  border-top: 2rpx solid rgba(19,101,91,.72);
+  border-right: 2rpx solid rgba(19,101,91,.72);
+  border-radius: 50%;
+  opacity: 0;
+  animation: greeting-wave 4.2s ease-in-out infinite;
+}
+
+.wave-left { left: 47.4%; top: 29%; transform: rotate(-32deg); }
+.wave-right { right: 5.8%; top: 29.7%; transform: rotate(132deg); animation-delay: .35s; }
+
+.recommendations {
+  position: absolute;
+  z-index: 2;
+  left: 5.05%;
+  top: 51.56%;
+  width: 90%;
+  height: 9.45%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1%;
+}
+
+.recommend-frame { overflow: hidden; border-radius: 10rpx 10rpx 0 0; }
+.recommend-frame image { width: 100%; height: 100%; transition: transform 240ms ease; }
+.recommend-active image { transform: scale(1.055); }
+
+.events-slider {
+  position: absolute;
+  z-index: 3;
+  left: 4.9%;
+  top: 78.65%;
+  width: 90.2%;
+  height: 10.9%;
+  background: #f4f1e8;
+}
+
+.events-row { display: flex; width: max-content; height: 100%; gap: 8rpx; }
+.events-row image { width: 175rpx; height: 100%; flex: none; border-radius: 10rpx; }
+
+@keyframes landscape-flow { from { transform: translateX(-8%); } to { transform: translateX(18%); } }
+@keyframes ip-left { 0%,18%,100%{transform:rotate(0)}25%{transform:rotate(-1.8deg) translateY(-1.2%)}32%{transform:rotate(1.6deg)}39%{transform:rotate(-1.2deg)}48%{transform:rotate(0)} }
+@keyframes ip-right { 0%,18%,100%{transform:rotate(0)}25%{transform:rotate(1.8deg) translateY(-1.2%)}32%{transform:rotate(-1.6deg)}39%{transform:rotate(1.2deg)}48%{transform:rotate(0)} }
+@keyframes greeting-wave { 0%,18%,52%,100%{opacity:0}26%,38%{opacity:.85}45%{opacity:.25} }
+@keyframes bamboo-sway { 0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(2.2deg)} }
 
 .tap-active {
   background: rgba(30, 102, 96, 0.12);

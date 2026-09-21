@@ -14,6 +14,14 @@
   border-radius: 24rpx;
 }
 
+.ai-history-zone {
+  left: 68.5%;
+  top: 40.2%;
+  width: 27.5%;
+  height: 9.6%;
+  border-radius: 24rpx;
+}
+
 .favorites-panel,
 .favorites-backdrop {
   position: absolute;
@@ -114,6 +122,25 @@
   color: #edc667;
   font-size: 42rpx;
   text-align: center;
+}
+
+.history-index {
+  display: grid;
+  width: 48rpx;
+  height: 48rpx;
+  place-items: center;
+  border-radius: 50%;
+  background: #176b62;
+  color: #fff;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.history-time {
+  display: block;
+  margin-top: 4rpx;
+  color: #a1793f;
+  font-size: 20rpx;
 }
 
 .favorite-route-name {

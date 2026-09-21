@@ -1,41 +1,41 @@
 const screens = {
   login: {
-    src: "./assets/login.jpg?v=flow-7",
+    src: "./assets/login.jpg?v=flow-8",
     alt: "师说古渊登录页",
     title: "登录｜师说古渊",
   },
   home: {
-    src: "./assets/home.jpg?v=flow-7",
+    src: "./assets/home.jpg?v=flow-8",
     alt: "师说古渊首页",
     title: "师说古渊",
   },
   culture: {
-    src: "./assets/guide-culture.jpg?v=flow-7",
+    src: "./assets/guide-culture.jpg?v=flow-8",
     alt: "师说古渊文化研学线导览页",
     title: "文化研学线｜师说古渊",
   },
   leisure: {
-    src: "./assets/guide-leisure.jpg?v=flow-7",
+    src: "./assets/guide-leisure.jpg?v=flow-8",
     alt: "师说古渊休闲体验线导览页",
     title: "休闲体验线｜师说古渊",
   },
   mine: {
-    src: "./assets/mine.jpg?v=flow-7",
+    src: "./assets/mine.jpg?v=flow-8",
     alt: "师说古渊我的页面",
     title: "我的｜师说古渊",
   },
   family: {
-    src: "./assets/guide-family.jpg?v=flow-7",
+    src: "./assets/guide-family.jpg?v=flow-8",
     alt: "师说古渊亲子探索线导览页",
     title: "亲子探索线｜师说古渊",
   },
   "ai-guide-1": {
-    src: "./assets/ai-guide-1.jpg?v=flow-7",
+    src: "./assets/ai-guide-1.jpg?v=flow-8",
     alt: "古渊头村AI讲解员第一页",
     title: "AI讲解员｜师说古渊",
   },
   "ai-guide-2": {
-    src: "./assets/ai-guide-2.jpg?v=flow-7",
+    src: "./assets/ai-guide-2.jpg?v=flow-8",
     alt: "古渊头村AI讲解员第二页",
     title: "AI讲解员下一站｜师说古渊",
   },
@@ -47,6 +47,11 @@ const routeDetails = {
   family: { name: "亲子探索线", summary: "自然课堂与非遗手作", page: "family" },
 };
 
+const aiLocations = {
+  "ai-guide-1": { name: "古渊头村总览", summary: "村史溯源 · 古樟问道广场" },
+  "ai-guide-2": { name: "博士文化展厅", summary: "AI讲解员 · 下一站" },
+};
+
 const image = document.querySelector("#screen-image");
 const screenLayers = [...document.querySelectorAll("[data-screen-layer]")];
 const consentButton = document.querySelector(".login-consent");
@@ -55,6 +60,8 @@ const previewLayout = document.querySelector(".preview-layout");
 const phone = document.querySelector(".phone");
 const favoritesPanel = document.querySelector("#favorites-panel");
 const favoritesList = document.querySelector("#favorites-list");
+const historyPanel = document.querySelector("#history-panel");
+const historyList = document.querySelector("#history-list");
 let consentAccepted = false;
 let toastTimer;
 let resizeFrame;
@@ -142,6 +149,7 @@ function render(page, animate = true) {
     layer.hidden = layer.dataset.screenLayer !== page;
   });
   favoritesPanel.hidden = true;
+  historyPanel.hidden = true;
   syncFavoriteButtons();
 
   if (animate) {
@@ -152,6 +160,7 @@ function render(page, animate = true) {
 
 function go(page) {
   if (!screens[page]) return;
+  if (aiLocations[page]) recordAIVisit(page);
   const nextHash = `#${page}`;
   if (window.location.hash === nextHash) {
     render(page);
@@ -159,6 +168,27 @@ function go(page) {
   }
   window.location.hash = nextHash;
   render(page);
+}
+
+function loadAIHistory() {
+  try {
+    const saved = JSON.parse(window.localStorage.getItem("shishuo-ai-history") || "[]");
+    return Array.isArray(saved) ? saved.filter((item) => aiLocations[item.page]).slice(0, 12) : [];
+  } catch {
+    return [];
+  }
+}
+
+function recordAIVisit(page) {
+  const history = loadAIHistory().filter((item) => item.page !== page);
+  const visitedAt = new Intl.DateTimeFormat("zh-CN", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date());
+  history.unshift({ page, visitedAt });
+  window.localStorage.setItem("shishuo-ai-history", JSON.stringify(history.slice(0, 12)));
 }
 
 function showToast(message) {
@@ -208,6 +238,28 @@ function showFavorites() {
   favoritesPanel.hidden = false;
 }
 
+function showAIHistory() {
+  const history = loadAIHistory();
+  historyList.replaceChildren();
+  if (!history.length) {
+    const empty = document.createElement("p");
+    empty.className = "favorites-empty";
+    empty.textContent = "暂时还没有导览记录，点击首页 AI 入口开始讲解吧。";
+    historyList.append(empty);
+  } else {
+    history.forEach((item, index) => {
+      const detail = aiLocations[item.page];
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "favorite-route-item history-item";
+      button.dataset.action = item.page;
+      button.innerHTML = `<span class="history-index">${index + 1}</span><span><strong>${detail.name}</strong><small>${detail.summary}</small><time>${item.visitedAt}</time></span><span class="favorite-route-arrow">›</span>`;
+      historyList.append(button);
+    });
+  }
+  historyPanel.hidden = false;
+}
+
 document.addEventListener("click", (event) => {
   const button = event.target.closest("[data-action]");
   if (!button) return;
@@ -224,6 +276,8 @@ document.addEventListener("click", (event) => {
   if (action === "toggle-favorite") toggleFavorite(button);
   if (action === "show-favorites") showFavorites();
   if (action === "close-favorites") favoritesPanel.hidden = true;
+  if (action === "show-ai-history") showAIHistory();
+  if (action === "close-ai-history") historyPanel.hidden = true;
   if (["login", "home", "culture", "leisure", "family", "mine", "ai-guide-1", "ai-guide-2"].includes(action)) go(action);
   if (action === "coming-soon") showToast(button.dataset.message);
 });

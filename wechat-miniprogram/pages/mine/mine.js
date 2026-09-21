@@ -1,11 +1,14 @@
 const { getFrameStyle } = require("../../utils/fit-frame");
 const { ROUTES, getFavoriteDetails } = require("../../utils/favorites");
+const { AI_LOCATIONS, getAIHistoryDetails } = require("../../utils/ai-history");
 
 Page({
   data: {
     frameStyle: "",
     favorites: [],
     showFavorites: false,
+    aiHistory: [],
+    showAIHistory: false,
   },
 
   onLoad() {
@@ -17,7 +20,7 @@ Page({
   },
 
   onShow() {
-    this.setData({ favorites: getFavoriteDetails() });
+    this.setData({ favorites: getFavoriteDetails(), aiHistory: getAIHistoryDetails() });
   },
 
   goHome() {
@@ -40,5 +43,19 @@ Page({
     const route = ROUTES[event.currentTarget.dataset.route];
     if (!route) return;
     wx.reLaunch({ url: route.url });
+  },
+
+  openAIHistory() {
+    this.setData({ aiHistory: getAIHistoryDetails(), showAIHistory: true });
+  },
+
+  closeAIHistory() {
+    this.setData({ showAIHistory: false });
+  },
+
+  goAIHistory(event) {
+    const location = AI_LOCATIONS[event.currentTarget.dataset.page];
+    if (!location) return;
+    wx.reLaunch({ url: location.url });
   },
 });

@@ -8,6 +8,7 @@
     />
 
     <view class="tap-zone favorites-zone" bindtap="openFavorites" hover-class="tap-active" aria-role="button" aria-label="查看收藏路线"></view>
+    <view class="tap-zone ai-history-zone" bindtap="openAIHistory" hover-class="tap-active" aria-role="button" aria-label="查看AI导览记录"></view>
     <view class="tap-zone mine-home-zone" bindtap="goHome" hover-class="tap-active" aria-role="button" aria-label="返回首页"></view>
     <view class="tap-zone mine-guide-zone" bindtap="goGuide" hover-class="tap-active" aria-role="button" aria-label="进入导览页面"></view>
 
@@ -32,6 +33,31 @@
           </button>
         </view>
         <text wx:else class="favorites-empty">暂未收藏路线，去导览页收藏一条路线吧。</text>
+      </view>
+    </view>
+
+    <view wx:if="{{showAIHistory}}" class="favorites-panel">
+      <view class="favorites-backdrop" bindtap="closeAIHistory"></view>
+      <view class="favorites-sheet">
+        <view class="favorites-heading">
+          <view>
+            <text class="favorites-eyebrow">导览足迹</text>
+            <text class="favorites-title">AI导览记录</text>
+          </view>
+          <button class="favorites-close" bindtap="closeAIHistory" aria-label="关闭">×</button>
+        </view>
+        <view wx:if="{{aiHistory.length}}" class="favorites-list">
+          <button wx:for="{{aiHistory}}" wx:key="page" class="favorite-route-item" data-page="{{item.page}}" bindtap="goAIHistory">
+            <text class="history-index">{{item.index}}</text>
+            <view class="favorite-route-copy">
+              <text class="favorite-route-name">{{item.name}}</text>
+              <text class="favorite-route-summary">{{item.summary}}</text>
+              <text class="history-time">{{item.visitedAt}}</text>
+            </view>
+            <text class="favorite-route-arrow">›</text>
+          </button>
+        </view>
+        <text wx:else class="favorites-empty">暂时还没有导览记录，点击首页 AI 入口开始讲解吧。</text>
       </view>
     </view>
   </view>

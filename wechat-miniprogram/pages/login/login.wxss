@@ -9,7 +9,7 @@
 .consent-mark {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 41%;
   width: 36%;
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
@@ -20,7 +20,7 @@
 .consent-check {
   position: absolute;
   left: 50%;
-  top: 48%;
+  top: 38%;
   width: 36%;
   height: 52%;
   transform: translate(-50%, -50%) rotate(45deg);
