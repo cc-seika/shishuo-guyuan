@@ -157,11 +157,11 @@ button {
 
 .home-ai-chat {
   left: 7.5%;
-  top: 33.1%;
-  width: 25%;
-  height: 4.8%;
+  top: 34.15%;
+  width: 20.65%;
+  height: 2.58%;
   border-radius: 999px;
-  background: url("./assets/home-motion/ai-chat-button.jpg?v=flow-9") center / 100% 100% no-repeat;
+  background: url("./assets/home-motion/ai-chat-button.jpg?v=flow-10") center / 100% 100% no-repeat;
   box-shadow: 0 3px 8px rgba(21, 90, 82, 0.08);
   transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
   transform-origin: center;
@@ -169,7 +169,7 @@ button {
 
 .home-ai-chat:hover,
 .home-ai-chat:active {
-  transform: scale(1.045);
+  transform: scale(1.035);
   filter: saturate(1.06);
   box-shadow: 0 5px 12px rgba(21, 90, 82, 0.16);
 }
@@ -452,9 +452,9 @@ button {
 }
 
 .guide-ip-bottom {
-  left: 0;
-  top: 71.9%;
-  width: 26.8%;
+  left: .7%;
+  top: 78.3%;
+  width: 23.4%;
   transform-origin: 44% 91%;
   animation-delay: .55s;
 }
@@ -473,7 +473,7 @@ button {
   position: absolute;
   left: var(--x);
   top: var(--y);
-  max-width: 31%;
+  max-width: 42%;
   padding: .24rem .5rem;
   border: 1px solid rgba(21, 100, 91, .16);
   border-radius: 999px;
@@ -481,12 +481,12 @@ button {
   box-shadow: 0 2px 5px rgba(20, 75, 69, .08);
   color: #125f57;
   font-family: "STSong", "Songti SC", serif;
-  font-size: clamp(.56rem, 2.4vw, .78rem);
+  font-size: clamp(.54rem, 2.2vw, .72rem);
   font-weight: 700;
   line-height: 1.15;
   white-space: nowrap;
   opacity: 0;
-  transform: translate(-50%, -50%) scale(.94);
+  transform: translate(-50%, -50%) scale(.98);
   transform-origin: center;
   transition: transform 190ms ease, box-shadow 190ms ease, background 190ms ease;
   pointer-events: auto;
@@ -496,7 +496,7 @@ button {
 .map-stations button:active,
 .map-stations button:focus-visible {
   z-index: 2;
-  transform: translate(-50%, -50%) scale(1.075);
+  transform: translate(-50%, -50%) scale(1.025);
   background: rgba(255, 253, 246, .98);
   box-shadow: 0 5px 12px rgba(20, 75, 69, .17);
   outline: none;
@@ -525,10 +525,10 @@ button {
 .guide-stops-slider::-webkit-scrollbar { display: none; }
 
 .guide-stops-slider img {
-  width: 29.5%;
+  width: 26%;
   height: 100%;
-  flex: 0 0 29.5%;
-  object-fit: cover;
+  flex: 0 0 26%;
+  object-fit: contain;
   border-radius: 7px;
   scroll-snap-align: start;
   user-select: none;
@@ -613,11 +613,11 @@ button {
 .guide-favorite::before {
   content: "★";
   position: absolute;
-  left: 11.5%;
+  left: 7.5%;
   top: 36%;
   transform: translateY(-50%) scale(0.72);
   color: transparent;
-  font-size: clamp(.92rem, 4.1vw, 1.38rem);
+  font-size: clamp(.74rem, 3.35vw, 1.05rem);
   line-height: 1;
   transition: color 160ms ease, transform 160ms ease;
 }

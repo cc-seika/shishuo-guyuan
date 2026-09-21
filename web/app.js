@@ -1,41 +1,41 @@
 const screens = {
   login: {
-    src: "./assets/login.jpg?v=flow-9",
+    src: "./assets/login.jpg?v=flow-10",
     alt: "师说古渊登录页",
     title: "登录｜师说古渊",
   },
   home: {
-    src: "./assets/home.jpg?v=flow-9",
+    src: "./assets/home.jpg?v=flow-10",
     alt: "师说古渊首页",
     title: "师说古渊",
   },
   culture: {
-    src: "./assets/guide-culture.jpg?v=flow-9",
+    src: "./assets/guide-culture.jpg?v=flow-10",
     alt: "师说古渊文化研学线导览页",
     title: "文化研学线｜师说古渊",
   },
   leisure: {
-    src: "./assets/guide-leisure.jpg?v=flow-9",
+    src: "./assets/guide-leisure.jpg?v=flow-10",
     alt: "师说古渊休闲体验线导览页",
     title: "休闲体验线｜师说古渊",
   },
   mine: {
-    src: "./assets/mine.jpg?v=flow-9",
+    src: "./assets/mine.jpg?v=flow-10",
     alt: "师说古渊我的页面",
     title: "我的｜师说古渊",
   },
   family: {
-    src: "./assets/guide-family.jpg?v=flow-9",
+    src: "./assets/guide-family.jpg?v=flow-10",
     alt: "师说古渊亲子探索线导览页",
     title: "亲子探索线｜师说古渊",
   },
   "ai-guide-1": {
-    src: "./assets/ai-guide-1.jpg?v=flow-9",
+    src: "./assets/ai-guide-1.jpg?v=flow-10",
     alt: "古渊头村AI讲解员第一页",
     title: "AI讲解员｜师说古渊",
   },
   "ai-guide-2": {
-    src: "./assets/ai-guide-2.jpg?v=flow-9",
+    src: "./assets/ai-guide-2.jpg?v=flow-10",
     alt: "古渊头村AI讲解员第二页",
     title: "AI讲解员下一站｜师说古渊",
   },

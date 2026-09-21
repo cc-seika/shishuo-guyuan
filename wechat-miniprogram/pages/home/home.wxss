@@ -8,15 +8,15 @@
 
 .ai-chat-zone {
   left: 7.5%;
-  top: 33.1%;
-  width: 25%;
-  height: 4.8%;
+  top: 34.15%;
+  width: 20.65%;
+  height: 2.58%;
   border-radius: 999rpx;
   background: url("/assets/home-motion/ai-chat-button.jpg") center / 100% 100% no-repeat;
   transition: transform 220ms ease;
 }
 
-.ai-chat-zone.tap-active { transform: scale(1.045); }
+.ai-chat-zone.tap-active { transform: scale(1.035); }
 
 .mine-tab-zone {
   left: 55%;
