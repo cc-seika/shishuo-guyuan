@@ -613,7 +613,7 @@ button {
 .guide-favorite::before {
   content: "★";
   position: absolute;
-  left: 14%;
+  left: 12%;
   top: 25%;
   transform: translateY(-50%) scale(0.72);
   color: transparent;

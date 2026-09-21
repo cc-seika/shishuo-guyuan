@@ -40,7 +40,7 @@
 
 .favorite-star {
   position: absolute;
-  left: 14%;
+  left: 12%;
   top: 25%;
   transform: translateY(-50%);
   color: #12675f;
