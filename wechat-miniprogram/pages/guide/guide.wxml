@@ -25,11 +25,15 @@
 
     <view
       class="tap-zone family-zone"
-      bindtap="showFamilyNotice"
+      bindtap="goFamily"
       hover-class="tap-active"
       aria-role="button"
       aria-label="切换到亲子探索线"
     ></view>
+
+    <view class="tap-zone favorite-zone" bindtap="toggleFavorite" hover-class="tap-active" aria-role="button" aria-label="收藏文化研学线">
+      <text wx:if="{{isFavorite}}" class="favorite-star">★</text>
+    </view>
 
     <view
       class="tap-zone start-zone"

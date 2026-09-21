@@ -23,6 +23,12 @@ Page({
     });
   },
 
+  goAIGuide() {
+    wx.navigateTo({
+      url: "/pages/ai-guide-one/ai-guide-one",
+    });
+  },
+
   goMine() {
     wx.navigateTo({
       url: "/pages/mine/mine",

@@ -8,12 +8,12 @@ Page({
     this.setData({ frameStyle: getFrameStyle() });
   },
 
-  onResize(event) {
-    this.setData({ frameStyle: getFrameStyle(event) });
+  onShow() {
+    this.setData({ isFavorite: isFavorite("family") });
   },
 
-  onShow() {
-    this.setData({ isFavorite: isFavorite("leisure") });
+  onResize(event) {
+    this.setData({ frameStyle: getFrameStyle(event) });
   },
 
   goHome() {
@@ -21,22 +21,17 @@ Page({
   },
 
   goCulture() {
-    wx.navigateBack({
-      delta: 1,
-      fail() {
-        wx.redirectTo({ url: "/pages/guide/guide" });
-      },
-    });
+    wx.redirectTo({ url: "/pages/guide/guide" });
   },
 
-  goFamily() {
-    wx.navigateTo({ url: "/pages/family/family" });
+  goLeisure() {
+    wx.redirectTo({ url: "/pages/leisure/leisure" });
   },
 
   toggleFavorite() {
-    const saved = toggleFavorite("leisure");
+    const saved = toggleFavorite("family");
     this.setData({ isFavorite: saved });
-    wx.showToast({ title: saved ? "已收藏休闲体验线" : "已取消收藏", icon: "none" });
+    wx.showToast({ title: saved ? "已收藏亲子探索线" : "已取消收藏", icon: "none" });
   },
 
   showNavigationNotice() {

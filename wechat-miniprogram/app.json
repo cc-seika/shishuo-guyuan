@@ -4,6 +4,9 @@
     "pages/home/home",
     "pages/guide/guide",
     "pages/leisure/leisure",
+    "pages/family/family",
+    "pages/ai-guide-one/ai-guide-one",
+    "pages/ai-guide-two/ai-guide-two",
     "pages/mine/mine"
   ],
   "window": {

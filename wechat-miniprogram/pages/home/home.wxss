@@ -6,6 +6,14 @@
   border-radius: 24rpx;
 }
 
+.ai-chat-zone {
+  left: 7.5%;
+  top: 33.1%;
+  width: 25%;
+  height: 4.8%;
+  border-radius: 999rpx;
+}
+
 .mine-tab-zone {
   left: 65%;
   bottom: 0;

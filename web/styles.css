@@ -155,6 +155,14 @@ button {
   height: 10.5%;
 }
 
+.home-ai-chat {
+  left: 7.5%;
+  top: 33.1%;
+  width: 25%;
+  height: 4.8%;
+  border-radius: 999px;
+}
+
 .home-mine-tab {
   left: 65%;
   bottom: 0;
@@ -173,6 +181,13 @@ button {
 .mine-home-tab { left: 13%; }
 .mine-guide-tab { left: 39%; }
 .mine-current-tab { left: 65%; }
+
+.mine-favorites {
+  left: 68.5%;
+  top: 30.3%;
+  width: 27.5%;
+  height: 10.8%;
+}
 
 .guide-back {
   left: 1.6%;
@@ -214,6 +229,203 @@ button {
   top: 23.7%;
   width: 22%;
   height: 4.2%;
+}
+
+.family-culture {
+  left: 3.2%;
+  top: 22.4%;
+  width: 23.5%;
+  height: 4.6%;
+}
+
+.family-leisure {
+  left: 27.3%;
+  top: 22.4%;
+  width: 22.5%;
+  height: 4.6%;
+}
+
+.guide-favorite {
+  left: 1.8%;
+  bottom: 1.1%;
+  width: 24.5%;
+  height: 5.8%;
+  border-radius: 999px;
+}
+
+.guide-favorite::before {
+  content: "★";
+  position: absolute;
+  left: 11%;
+  top: 37%;
+  transform: translateY(-50%) scale(0.75);
+  color: transparent;
+  font-size: clamp(1.05rem, 4.6vw, 1.65rem);
+  line-height: 1;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.guide-favorite.is-saved::before {
+  color: #f3cf72;
+  transform: translateY(-50%) scale(1);
+  -webkit-text-stroke: 0.5px #d5a84a;
+  text-shadow: 0 1px 2px rgba(116, 83, 24, 0.15);
+}
+
+.ai-back {
+  left: 2.5%;
+  top: 0.8%;
+  width: 12%;
+  height: 6.2%;
+}
+
+.ai-next {
+  right: 3.5%;
+  bottom: 1.8%;
+  width: 30%;
+  height: 7.3%;
+  border-radius: 999px;
+}
+
+.ai-previous {
+  left: 3.8%;
+  bottom: 2.1%;
+  width: 30%;
+  height: 7.1%;
+  border-radius: 999px;
+}
+
+.favorites-panel,
+.favorites-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.favorites-panel {
+  z-index: 8;
+}
+
+.favorites-panel[hidden] {
+  display: none;
+}
+
+.favorites-backdrop {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: rgba(13, 50, 47, 0.36);
+  backdrop-filter: blur(2px);
+}
+
+.favorites-sheet {
+  position: absolute;
+  right: 3.5%;
+  bottom: 2.5%;
+  left: 3.5%;
+  max-height: 58%;
+  overflow: auto;
+  padding: 5.5% 5% 6%;
+  border: 1px solid rgba(34, 91, 83, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 252, 244, 0.98);
+  box-shadow: 0 18px 45px rgba(15, 58, 52, 0.24);
+}
+
+.favorites-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.favorites-heading p,
+.favorites-heading h2 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.favorites-heading p {
+  color: #a77b35;
+  font-size: clamp(0.68rem, 2.4vw, 0.84rem);
+}
+
+.favorites-heading h2 {
+  margin-top: 0.15rem;
+  color: #125851;
+  font-family: "STSong", "Songti SC", serif;
+  font-size: clamp(1.28rem, 5vw, 1.8rem);
+}
+
+.favorites-close {
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #e9f0e8;
+  color: #195e57;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.favorites-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.favorite-route-item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) 1rem;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 4.25rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(28, 102, 93, 0.16);
+  border-radius: 8px;
+  background: #f8f6ed;
+  color: #145a54;
+  text-align: left;
+}
+
+.favorite-route-star {
+  color: #edc667;
+  font-size: 1.65rem;
+  text-align: center;
+  -webkit-text-stroke: 0.5px #cc9e3e;
+}
+
+.favorite-route-item strong,
+.favorite-route-item small {
+  display: block;
+  letter-spacing: 0;
+}
+
+.favorite-route-item strong {
+  font-size: clamp(0.92rem, 3.6vw, 1.12rem);
+}
+
+.favorite-route-item small {
+  margin-top: 0.2rem;
+  color: #70827e;
+  font-size: clamp(0.7rem, 2.6vw, 0.82rem);
+}
+
+.favorite-route-arrow {
+  color: #b78335;
+  font-size: 1.5rem;
+}
+
+.favorites-empty {
+  margin: 0;
+  padding: 1.5rem 0.75rem;
+  color: #627873;
+  font-size: clamp(0.8rem, 3vw, 0.95rem);
+  line-height: 1.6;
+  text-align: center;
 }
 
 .toast {

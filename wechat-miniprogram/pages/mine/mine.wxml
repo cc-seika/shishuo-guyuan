@@ -7,7 +7,32 @@
       aria-label="师说古渊我的页面界面"
     />
 
+    <view class="tap-zone favorites-zone" bindtap="openFavorites" hover-class="tap-active" aria-role="button" aria-label="查看收藏路线"></view>
     <view class="tap-zone mine-home-zone" bindtap="goHome" hover-class="tap-active" aria-role="button" aria-label="返回首页"></view>
     <view class="tap-zone mine-guide-zone" bindtap="goGuide" hover-class="tap-active" aria-role="button" aria-label="进入导览页面"></view>
+
+    <view wx:if="{{showFavorites}}" class="favorites-panel">
+      <view class="favorites-backdrop" bindtap="closeFavorites"></view>
+      <view class="favorites-sheet">
+        <view class="favorites-heading">
+          <view>
+            <text class="favorites-eyebrow">我的收藏</text>
+            <text class="favorites-title">收藏路线</text>
+          </view>
+          <button class="favorites-close" bindtap="closeFavorites" aria-label="关闭">×</button>
+        </view>
+        <view wx:if="{{favorites.length}}" class="favorites-list">
+          <button wx:for="{{favorites}}" wx:key="id" class="favorite-route-item" data-route="{{item.id}}" bindtap="goFavorite">
+            <text class="favorite-route-star">★</text>
+            <view class="favorite-route-copy">
+              <text class="favorite-route-name">{{item.name}}</text>
+              <text class="favorite-route-summary">{{item.summary}}</text>
+            </view>
+            <text class="favorite-route-arrow">›</text>
+          </button>
+        </view>
+        <text wx:else class="favorites-empty">暂未收藏路线，去导览页收藏一条路线吧。</text>
+      </view>
+    </view>
   </view>
 </view>

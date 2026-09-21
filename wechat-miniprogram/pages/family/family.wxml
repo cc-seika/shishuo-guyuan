@@ -1,10 +1,10 @@
-<view class="prototype-page" aria-label="师说古渊休闲体验线导览页">
+<view class="prototype-page" aria-label="师说古渊亲子探索线导览页">
   <view class="screen-frame" style="{{frameStyle}}">
-    <image class="prototype-screen" src="/assets/guide-leisure.jpg" mode="scaleToFill" aria-label="休闲体验线导览界面" />
+    <image class="prototype-screen" src="/assets/guide-family.jpg" mode="scaleToFill" aria-label="亲子探索线导览界面" />
     <view class="tap-zone back-zone" bindtap="goHome" hover-class="tap-active" aria-role="button" aria-label="返回首页"></view>
     <view class="tap-zone culture-zone" bindtap="goCulture" hover-class="tap-active" aria-role="button" aria-label="切换到文化研学线"></view>
-    <view class="tap-zone family-zone" bindtap="goFamily" hover-class="tap-active" aria-role="button" aria-label="切换到亲子探索线"></view>
-    <view class="tap-zone favorite-zone" bindtap="toggleFavorite" hover-class="tap-active" aria-role="button" aria-label="收藏休闲体验线">
+    <view class="tap-zone leisure-zone" bindtap="goLeisure" hover-class="tap-active" aria-role="button" aria-label="切换到休闲体验线"></view>
+    <view class="tap-zone favorite-zone" bindtap="toggleFavorite" hover-class="tap-active" aria-role="button" aria-label="收藏亲子探索线">
       <text wx:if="{{isFavorite}}" class="favorite-star">★</text>
     </view>
     <view class="tap-zone start-zone" bindtap="showNavigationNotice" hover-class="tap-active" aria-role="button" aria-label="开始导航"></view>

@@ -8,6 +8,14 @@
     />
 
     <view
+      class="tap-zone ai-chat-zone"
+      bindtap="goAIGuide"
+      hover-class="tap-active"
+      aria-role="button"
+      aria-label="与AI助手对话"
+    ></view>
+
+    <view
       class="tap-zone guide-tab-zone"
       bindtap="goGuide"
       hover-class="tap-active"

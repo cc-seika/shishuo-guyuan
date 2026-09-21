@@ -1,0 +1,7 @@
+<view class="prototype-page" aria-label="古渊头村AI讲解员第一页">
+  <view class="screen-frame" style="{{frameStyle}}">
+    <image class="prototype-screen" src="/assets/ai-guide-1.jpg" mode="scaleToFill" aria-label="古渊头村AI讲解员界面" />
+    <view class="tap-zone back-zone" bindtap="goBack" hover-class="tap-active" aria-role="button" aria-label="返回首页"></view>
+    <view class="tap-zone next-zone" bindtap="goNext" hover-class="tap-active" aria-role="button" aria-label="前往下一站"></view>
+  </view>
+</view>

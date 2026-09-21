@@ -1,8 +1,10 @@
 const { getFrameStyle } = require("../../utils/fit-frame");
+const { isFavorite, toggleFavorite } = require("../../utils/favorites");
 
 Page({
   data: {
     frameStyle: "",
+    isFavorite: false,
   },
 
   onLoad() {
@@ -15,6 +17,10 @@ Page({
     this.setData({
       frameStyle: getFrameStyle(event),
     });
+  },
+
+  onShow() {
+    this.setData({ isFavorite: isFavorite("culture") });
   },
 
   goBack() {
@@ -34,11 +40,16 @@ Page({
     });
   },
 
-  showFamilyNotice() {
-    wx.showToast({
-      title: "亲子探索线将在下一版接入",
-      icon: "none",
+  goFamily() {
+    wx.navigateTo({
+      url: "/pages/family/family",
     });
+  },
+
+  toggleFavorite() {
+    const saved = toggleFavorite("culture");
+    this.setData({ isFavorite: saved });
+    wx.showToast({ title: saved ? "已收藏文化研学线" : "已取消收藏", icon: "none" });
   },
 
   showNavigationNotice() {
