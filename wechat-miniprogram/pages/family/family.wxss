@@ -13,7 +13,7 @@
 .map-station { position:absolute; max-width:42%; padding:5rpx 10rpx; border:1rpx solid transparent; border-radius:999rpx; background:transparent; color:transparent; font-size:18rpx; font-weight:700; line-height:1.15; white-space:nowrap; opacity:0; transform:translate(-50%,-50%) scale(.98); transition:transform 190ms ease; pointer-events:auto; }
 .station-active { z-index:2; transform:translate(-50%,-50%) scale(1.025); background:#fffdf6; color:#125f57; opacity:1; }
 .s1{left:8%;top:78%}.s2{left:21%;top:55%}.s3{left:40%;top:34%}.s4{left:57%;top:12%}.s5{left:67%;top:29%}.s7{left:58%;top:65%}.s8{left:82%;top:53%}
-.guide-stops-slider { position:absolute; z-index:5; left:7.1%; top:59.4%; width:88.4%; height:12.2%; background:#f7f4ec; }
+.guide-stops-slider { position:absolute; z-index:5; left:8.65%; top:59.4%; width:86.2%; height:12.2%; background:#f7f4ec; }
 .stops-row { display:flex; width:max-content; height:100%; gap:6rpx; }
 .stops-row image { width:154rpx; height:100%; flex:none; border-radius:10rpx; object-fit:contain; }
 @keyframes guide-flow { from{transform:translateX(-8%)} to{transform:translateX(18%)} }

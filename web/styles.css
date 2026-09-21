@@ -506,9 +506,9 @@ button {
 .guide-stops-slider {
   position: absolute;
   z-index: 5;
-  left: 7.1%;
+  left: 8.65%;
   top: 59.4%;
-  width: 88.4%;
+  width: 86.2%;
   height: 12.2%;
   display: flex;
   gap: .8%;
@@ -525,9 +525,9 @@ button {
 .guide-stops-slider::-webkit-scrollbar { display: none; }
 
 .guide-stops-slider img {
-  width: 26%;
+  width: 24.1%;
   height: 100%;
-  flex: 0 0 26%;
+  flex: 0 0 24.1%;
   object-fit: contain;
   border-radius: 7px;
   scroll-snap-align: start;
