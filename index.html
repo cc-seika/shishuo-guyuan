@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f6f2e9" />
     <meta name="description" content="师说古渊文旅导览小程序首版交互原型" />
     <title>师说古渊</title>
-    <link rel="stylesheet" href="./styles.css?v=flow-7" />
+    <link rel="stylesheet" href="./styles.css?v=flow-8" />
   </head>
   <body>
     <main class="preview-layout">
@@ -14,7 +14,7 @@
         <img
           id="screen-image"
           class="screen-image"
-          src="./assets/login.jpg?v=flow-7"
+          src="./assets/login.jpg?v=flow-8"
           alt="师说古渊登录页"
           draggable="false"
         />
@@ -36,6 +36,25 @@
         </div>
 
         <div class="hotspot-layer" data-screen-layer="home" aria-label="首页交互区域" hidden>
+          <div class="home-landscape-motion" aria-hidden="true"></div>
+          <img class="home-ip home-ip-left" src="./assets/home-motion/ip-left.png?v=flow-8" alt="" aria-hidden="true" />
+          <img class="home-ip home-ip-right" src="./assets/home-motion/ip-right.png?v=flow-8" alt="" aria-hidden="true" />
+          <span class="home-wave home-wave-left" aria-hidden="true"></span>
+          <span class="home-wave home-wave-right" aria-hidden="true"></span>
+          <img class="home-bamboo" src="./assets/home-motion/bamboo.png?v=flow-8" alt="" aria-hidden="true" />
+          <div class="home-recommendations" aria-label="今日推荐风景">
+            <span><img src="./assets/home-motion/recommend-1.jpg?v=flow-8" alt="古桥流水" /></span>
+            <span><img src="./assets/home-motion/recommend-2.jpg?v=flow-8" alt="水乡漫游" /></span>
+            <span><img src="./assets/home-motion/recommend-3.jpg?v=flow-8" alt="清廉茶社" /></span>
+            <span><img src="./assets/home-motion/recommend-4.jpg?v=flow-8" alt="博士书房" /></span>
+          </div>
+          <div class="home-events-slider" aria-label="近期活动，可左右滑动">
+            <img src="./assets/home-motion/event-1.jpg?v=flow-8" alt="古渊水上集市" />
+            <img src="./assets/home-motion/event-2.jpg?v=flow-8" alt="水稻制作体验" />
+            <img src="./assets/home-motion/event-3.jpg?v=flow-8" alt="清风茶会" />
+            <img src="./assets/home-motion/event-1.jpg?v=flow-8" alt="古渊水上集市加场" />
+            <img src="./assets/home-motion/event-2.jpg?v=flow-8" alt="水稻制作体验加场" />
+          </div>
           <button class="hotspot home-ai-chat" type="button" data-action="ai-guide-1" aria-label="与AI助手对话"></button>
           <button
             class="hotspot home-guide-tab"
@@ -44,10 +63,12 @@
             aria-label="进入导览页面"
           ></button>
           <button class="hotspot home-mine-tab" type="button" data-action="mine" aria-label="进入我的页面"></button>
+          <button class="hotspot home-ai-orb" type="button" data-action="ai-guide-1" aria-label="打开AI讲解员"></button>
         </div>
 
         <div class="hotspot-layer" data-screen-layer="mine" aria-label="我的页面交互区域" hidden>
           <button class="hotspot mine-favorites" type="button" data-action="show-favorites" aria-label="查看收藏路线"></button>
+          <button class="hotspot mine-ai-history" type="button" data-action="show-ai-history" aria-label="查看AI导览记录"></button>
           <button class="hotspot mine-home-tab" type="button" data-action="home" aria-label="返回首页"></button>
           <button class="hotspot mine-guide-tab" type="button" data-action="culture" aria-label="进入导览页面"></button>
           <button class="hotspot mine-current-tab" type="button" data-action="mine" aria-label="当前我的页面"></button>
@@ -128,6 +149,20 @@
           </div>
         </section>
 
+        <section id="history-panel" class="favorites-panel" aria-label="AI导览记录" aria-modal="true" role="dialog" hidden>
+          <button class="favorites-backdrop" type="button" data-action="close-ai-history" aria-label="关闭AI导览记录"></button>
+          <div class="favorites-sheet history-sheet">
+            <div class="favorites-heading">
+              <div>
+                <p>导览足迹</p>
+                <h2>AI导览记录</h2>
+              </div>
+              <button class="favorites-close" type="button" data-action="close-ai-history" aria-label="关闭">×</button>
+            </div>
+            <div id="history-list" class="favorites-list"></div>
+          </div>
+        </section>
+
         <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
       </section>
 
@@ -135,12 +170,12 @@
         <p class="eyebrow">V0.1 交互原型</p>
         <h1>师说古渊</h1>
         <p>使用微信或手机浏览器扫码，即可通过公网体验完整首版流程。</p>
-        <img src="./assets/preview-qr.png?v=flow-7" alt="师说古渊公网预览二维码" />
+        <img src="./assets/preview-qr.png?v=flow-8" alt="师说古渊公网预览二维码" />
         <code>cc-seika.github.io/shishuo-guyuan/</code>
         <p class="hint">勾选协议并登录后，可从首页底部进入“导览”或“我的”，继续体验首版流程。</p>
       </aside>
     </main>
 
-    <script src="./app.js?v=flow-7"></script>
+    <script src="./app.js?v=flow-8"></script>
   </body>
 </html>
