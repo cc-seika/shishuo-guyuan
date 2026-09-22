@@ -42,7 +42,7 @@
     ></view>
 
     <view class="tap-zone favorite-zone" bindtap="toggleFavorite" hover-class="tap-active" aria-role="button" aria-label="收藏文化研学线">
-      <text wx:if="{{isFavorite}}" class="favorite-star">★</text>
+      <image wx:if="{{isFavorite}}" class="favorite-star" src="/assets/favorite-star.png" mode="scaleToFill" aria-hidden="true" />
     </view>
 
     <view

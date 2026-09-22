@@ -40,13 +40,12 @@
 
 .favorite-star {
   position: absolute;
-  left: 12%;
-  top: 25%;
-  transform: translateY(-50%);
-  color: #12675f;
-  font-size: 28rpx;
-  line-height: 1;
-  text-shadow: 0 1rpx 2rpx rgba(12, 76, 69, 0.18);
+  left: 16.13%;
+  top: 9.86%;
+  width: 14.5%;
+  height: 31%;
+  filter: drop-shadow(0 1rpx 1rpx rgba(12, 76, 69, 0.2));
+  pointer-events: none;
 }
 
 .tap-active {

@@ -14,7 +14,7 @@
     <view class="tap-zone culture-zone" bindtap="goCulture" hover-class="tap-active" aria-role="button" aria-label="切换到文化研学线"></view>
     <view class="tap-zone leisure-zone" bindtap="goLeisure" hover-class="tap-active" aria-role="button" aria-label="切换到休闲体验线"></view>
     <view class="tap-zone favorite-zone" bindtap="toggleFavorite" hover-class="tap-active" aria-role="button" aria-label="收藏亲子探索线">
-      <text wx:if="{{isFavorite}}" class="favorite-star">★</text>
+      <image wx:if="{{isFavorite}}" class="favorite-star" src="/assets/favorite-star.png" mode="scaleToFill" aria-hidden="true" />
     </view>
     <view class="tap-zone start-zone" bindtap="showNavigationNotice" hover-class="tap-active" aria-role="button" aria-label="开始导航"></view>
   </view>

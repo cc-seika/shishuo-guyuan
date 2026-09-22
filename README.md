@@ -4,7 +4,7 @@
 
 界面基准画布已按参考图统一为 `591 × 1280 px`。H5 与微信小程序会在保持该比例的基础上适配实际手机屏幕。
 
-移动端使用可视窗口自适应：根据 iPhone Safari 或微信内置浏览器实际剩余高度完整等比缩放页面，并避开刘海、灵动岛和底部安全区。页面不会再通过裁切来铺满屏幕；较矮的机型会在左右保留少量背景，以保证整张界面完整可见。
+移动端使用可视窗口自适应：根据 iPhone Safari、Android 浏览器或微信内置浏览器的实际可用宽高完整等比缩放页面，并避开刘海、灵动岛、圆角屏和底部安全区。H5 与微信小程序都固定保持 `591:1280` 画布比例，页面不会通过裁切来铺满屏幕；与画布同坐标系的交互和收藏星标会同步等比缩放，较矮或较宽的机型会保留少量背景，以保证整张界面完整可见。
 
 ## 目录
 
@@ -16,7 +16,7 @@
 任何人都可以直接访问以下公网地址，不需要与开发电脑连接同一个 Wi-Fi，开发电脑关机后也可继续访问：
 
 ```text
-https://cc-seika.github.io/shishuo-guyuan/?v=flow-16#login
+https://cc-seika.github.io/shishuo-guyuan/?v=flow-17#login
 ```
 
 `web/assets/preview-qr.png` 已更新为该公网地址的二维码。
@@ -32,7 +32,7 @@ powershell -ExecutionPolicy Bypass -File .\start-preview.ps1
 本机调试地址为：
 
 ```text
-http://127.0.0.1:4173/web/?v=flow-16#login
+http://127.0.0.1:4173/web/?v=flow-17#login
 ```
 
 本机调试链接仅用于开发；对外分享请使用上方 GitHub Pages 公网地址和二维码。
